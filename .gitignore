@@ -1,158 +1,113 @@
-# Dependencies
-**/node_modules
-**/.pnp
-**/.pnp.js
+# Dependency directories
+node_modules
+dist
+dist-ssr
+*.local
 
-# Testing
-**/coverage
+# Environment and secret files
+.env
+.env.*
+!.env.example
+*.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# Production
-**/build
-**/dist
+# Vite specific
+.vite/
+.vite/deps_temp_*
 
-# Client-side secrets and configs
-client/.env
-client/.env.local
-client/.env.development
-client/.env.test
-client/.env.production
-client/src/config/firebase.js
-client/src/config/api.js
-client/src/config/keys.js
-client/src/config/secrets.js
-client/public/firebase-messaging-sw.js
-client/src/firebase-config.js
-
-# Server-side secrets and configs
-server/.env
-server/config/*.env
-server/config/config.js
-server/config/keys.js
-server/config/secrets.js
-server/config/database.js
-server/.env.local
-server/.env.development
-server/.env.test
-server/.env.production
-server/serviceAccountKey.json
-
-# Database configurations
-**/config/database.config.js
-**/config/mongodb.config.js
-**/config/mysql.config.js
-**/config/postgresql.config.js
-**/config/redis.config.js
-
-# API Keys and Secrets
-**/config/keys.js
-**/config/secrets.js
-**/config/*.key
-**/config/*.pem
-**/config/*.crt
-**/config/*.cert
-**/config/*.p12
-**/config/*.pfx
-**/config/credentials.*
-
-# Authentication and OAuth
-**/auth/*
-**/oauth/*
-**/config/passport.js
-**/config/jwt.js
-**/config/oauth.js
-google-credentials.json
-firebase-credentials.json
-aws-credentials.json
-**/serviceAccount.json
-**/oauth-credentials.json
-
-# Payment Gateway Configurations
-**/config/stripe.js
-**/config/paypal.js
-**/config/razorpay.js
-**/config/payment.js
-
-# SSL Certificates
-**/*.pem
-**/*.key
-**/*.crt
-**/*.cer
-**/*.der
-**/*.pfx
-**/*.p12
-**/*.ssl
-
-# Debug logs
+# Logs
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-debug.log
-*.log
-**/logs
-**/log
+pnpm-debug.log*
+lerna-debug.log*
 
 # Editor directories and files
+.vscode/*
+!.vscode/extensions.json
 .idea
-.vscode
+.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
-.DS_Store
-*.sublime-*
-.history
 
-# Cache and temporary files
+# Testing
+coverage
+.nyc_output
+
+# Production build
+build
+dist
+out
+
+# Cache directories
 .cache
-.temp
-.tmp
-*.tmp
-.eslintcache
-.stylelintcache
-.sass-cache
+.mf
+.rollup.cache
+tsconfig.tsbuildinfo
 
-# Local development files
-*.local
-local.*
-**/local/
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Local Netlify folder
+.netlify
+
+# Vercel
+.vercel
+
+# Firebase
+.firebase/
+.firebaserc
+firebase-debug.log
+firebase.json
+
+# Client-side config files
+/src/config/*
+!/src/config/index.example.js
+/src/firebase-config.js
+/public/firebase-messaging-sw.js
+
+# API keys and secrets
+**/config/keys.js
+**/config/secrets.js
+**/config/*.key
+**/config/api.js
+**/config/firebase.js
+
+# SSL certificates
+*.pem
+*.key
+*.crt
+*.cer
+*.der
+*.priv
 
 # Backup files
 *.bak
 *.backup
 *~
-*.swp
 
-# Personal TODO files
-TODO
-TODO.*
-*.todo
-
-# System Files
-Thumbs.db
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
 ehthumbs.db
-Desktop.ini
-
-# Email configurations
-**/config/email.js
-**/config/smtp.js
-**/config/sendgrid.js
-**/config/mailgun.js
-
-# Cloud Service Configurations
-**/config/aws.js
-**/config/s3.js
-**/config/cloudinary.js
-**/config/firebase-admin.js
-**/config/gcloud.js
-
-# Deployment configurations
-.vercel
-.netlify
-.firebase/
-firebase.json
-.firebaserc
-.elasticbeanstalk/
-.ebextensions/
-.gitlab-ci.yml
-docker-compose.override.yml 
+Thumbs.db 
