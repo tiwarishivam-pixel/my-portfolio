@@ -4,18 +4,7 @@ import { CommandLineIcon } from '@heroicons/react/24/outline';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated Background */}
-      <div className="fixed inset-0 -z-10 bg-primary">
-        <div className="stars"></div>
-        <div className="twinkling"></div>
-        <div className="particles">
-          {[...Array(20)].map((_, i) => (
-            <div key={i} className={`particle particle-${i}`}></div>
-          ))}
-        </div>
-      </div>
-
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -31,10 +20,19 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-light mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold text-light mb-4"
+          >
+            Hi, I'm Shivam Tiwari
+          </motion.h1>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary mb-6"
           >
             Full Stack Developer
-          </motion.h1>
+          </motion.h2>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -42,7 +40,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xl text-light/60 mb-12 max-w-2xl mx-auto"
           >
-            I build modern web applications with cutting-edge technologies
+            I'm a passionate Full Stack Web & App Developer, constantly learning and exploring modern technologies to create innovative solutions. I love building scalable applications that make a difference.
           </motion.p>
 
           <motion.div
@@ -100,49 +98,6 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
-
-      <style jsx="true">{`
-        .stars, .twinkling, .particles {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
-        }
-
-        .particle {
-          position: absolute;
-          width: 4px;
-          height: 4px;
-          background: white;
-          border-radius: 50%;
-          box-shadow: 0 0 10px #fff, 0 0 20px #fff;
-        }
-
-        ${[...Array(20)].map((_, i) => `
-          .particle-${i} {
-            top: ${Math.random() * 100}vh;
-            left: ${Math.random() * 100}vw;
-            background: hsl(${Math.random() * 360}, 70%, 60%);
-            animation: float-${i} ${15 + Math.random() * 10}s infinite linear;
-          }
-
-          @keyframes float-${i} {
-            0% {
-              transform: translate(0, 0) rotate(0deg);
-            }
-            33% {
-              transform: translate(${100 + Math.random() * 100}px, ${-100 + Math.random() * 50}px) rotate(120deg);
-            }
-            66% {
-              transform: translate(${-100 + Math.random() * 50}px, ${100 + Math.random() * 100}px) rotate(240deg);
-            }
-            100% {
-              transform: translate(0, 0) rotate(360deg);
-            }
-          }
-        `).join('')}
-      `}</style>
     </section>
   );
 };
